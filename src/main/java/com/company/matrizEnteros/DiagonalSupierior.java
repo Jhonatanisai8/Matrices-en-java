@@ -11,18 +11,18 @@ public class DiagonalSupierior {
     }
 
     public static void ejemplo() {
-        int matriz[][] = new int[5][5];
+        int matriz[][] = new int[7][7];
         rellenarMatriz(matriz);
-        
+
     }
 
     public static void rellenarMatriz(int matriz[][]) {
         System.out.println("Rellenando la Matriz con ceros y unos ");
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                if (i == j) {
+                if (i == j || ( i + j) == (matriz.length - 1)) {
                     matriz[i][j] = 1;
-                } 
+                }
             }
         }
         mostrarMatriz(matriz);
